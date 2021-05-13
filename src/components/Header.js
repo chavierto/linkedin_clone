@@ -53,6 +53,23 @@ const Header = (props) => {
 								<span>Notifications</span>
 							</a>
 						</NavItem>
+
+						<User>
+							<a>
+								<img src='/images/user.svg' alt=''></img>
+								<span>Me</span>
+								<img src='/images/down-icon.svg' alt='' />
+							</a>
+						</User>
+						<Work>
+							<a>
+								<img src='/images/nav-work.svg' alt='' />
+								<span>
+									Work
+									<img src='/images/down-icon.svg' alt='' />
+								</span>
+							</a>
+						</Work>
 					</NavItemWrap>
 				</Nav>
 			</Content>
@@ -189,6 +206,28 @@ const NavItem = styled.li`
 			}
 		}
 	}
+`;
+
+const User = styled(NavItem)`
+	a > svg {
+		width: 24px;
+		border-radius: 50%;
+	}
+
+	a > img {
+		width: 24px;
+		height: 24px;
+		border-radius: 50%;
+	}
+
+	span {
+		display: flex;
+		align-items: center;
+	}
+`;
+
+const Work = styled(User)`
+	border-left: 1px solid rgba(0, 0, 0, 0.08);
 `;
 
 export default Header;
